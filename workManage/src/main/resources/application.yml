@@ -1,0 +1,19 @@
+spring:
+#  profiles:
+#    active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl
+    username: root
+    password: root
+  jpa:
+    hibernate:
+    #create这个配置，程序每次启动都会创建一个空的表，如果之前有这个表会先删除
+     # ddl-auto: create
+     #最常用的方式，第一次运行也会创建对应的表结构，但是如果有数据不会删除，而是保留
+      #ddl-auto: update
+      ddl-auto: update
+
+    show-sql: true
+
+
